@@ -1,5 +1,5 @@
 #for tomcat open port 8080
-FROM index.alauda.cn/tutum/centos
+FROM centos
 MAINTAINER ydmm "1006248405@qq.com"
 RUN yum clean all
 RUN yum makecache
