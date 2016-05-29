@@ -6,5 +6,8 @@ RUN yum makecache
 RUN yum install -y java-1.8.0-openjdk.x86_64
 RUN yum install -y wget
 RUN yum install -y mlocate
-ADD apache-tomcat-9.0.0.M6/ /usr/apache-tomcat-9.0.0.M6/
+RUN cd /usr/
+RUN wget http://mirror.sdunix.com/apache/tomcat/tomcat-9/v9.0.0.M6/bin/apache-tomcat-9.0.0.M6.tar.gz
+RUN tar -xzvf apache-tomcat-9.0.0.M6.tar.gz
+CMD ["/usr/apache-tomcat-9.0.0.M6/bin/startup.sh"]
 EXPOSE 8080
