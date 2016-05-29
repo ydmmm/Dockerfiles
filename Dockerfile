@@ -1,6 +1,6 @@
 #test images
-FROM ubuntu:14.04
+FROM centos
 MAINTAINER ydmmm
-RUN apt-get update
-RUN apt-get install -y nginx
+RUN yum update
+RUN yum install -y nginx
 EXPOSE 80
