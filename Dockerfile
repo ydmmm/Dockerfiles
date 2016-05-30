@@ -9,5 +9,5 @@ RUN yum install -y mlocate
 RUN cd /usr/
 RUN wget http://mirror.sdunix.com/apache/tomcat/tomcat-9/v9.0.0.M6/bin/apache-tomcat-9.0.0.M6.tar.gz
 RUN tar -xzvf apache-tomcat-9.0.0.M6.tar.gz
-CMD ["/usr/apache-tomcat-9.0.0.M6/bin/startup.sh"]
+ENTRYPOINT ["/usr/apache-tomcat-9.0.0.M6/bin/startup.sh"]
 EXPOSE 8080
